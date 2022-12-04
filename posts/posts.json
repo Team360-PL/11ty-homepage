@@ -1,8 +1,8 @@
 {
-  "layout": "layouts/post.njk",
-  "tags": [
-    "posts"
-  ],
-  "columns": 4,
-  "sidebar": true
-}
+    "layout": "layouts/post.njk",
+    "tags": [
+      "posts"
+    ],
+    "columns": 4,
+    "sidebar": true
+  }  

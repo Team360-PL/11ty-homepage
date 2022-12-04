@@ -1,6 +1,6 @@
-# Homepage for e-editiones
+# Homepage for Team360
 
-New homepage for e-editiones.
+New homepage for Team360.
 
 ## Install and run locally
 
@@ -12,7 +12,6 @@ New homepage for e-editiones.
 
 * Blog articles, news, announcements etc. are stored in `posts`
 * Static pages (i.e. everything which is not a post) are found in `pages`
-* geodata for the TEI Publisher map is kept in `_data/geodata.json`
 
 ## Contributing articles
 
@@ -35,21 +34,19 @@ coverImageCredits: Any credits to be shown for the cover image
 
 Every article should use at least one of the following tags. Nested tags below should be used in combination with the corresponding parent tag.
 
-* events
-  * workshop
-  * meetups
-  * conference
-* announcements
-  * call
-  * e-editiones
-  * tei-publisher
-  * ... other tags referring to a particular software package, working group etc.
+* bno
+  * wesolino
+  * ctz
+  * ... other tags related to orienteering
+* biegi
+  * wbg
+  * jbg
+  * zbg
+  * ... other tags related to regular running competitions
+* trening
+  * wf
 * tutorial
-  * beginner
-  * intermediate
-  * advanced
+  * początkujący
+  * pro-tip
+  * ...
 * faq
-* report
-  * projects
-  * best practice
-* teaching

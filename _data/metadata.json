@@ -1,17 +1,17 @@
 {
-  "title": "e-editiones",
-  "url": "https://e-editiones.org/",
+  "title": "team360",
+  "url": "https://team360.pl/",
   "language": "en",
-  "description": "e-editiones – Society for Scholarly Digital Editions",
+  "description": "Stowarzyszenie Team 360",
   "feed": {
-    "subtitle": "e-editiones – Society for Scholarly Digital Editions",
+    "subtitle": "Stowarzyszenie Team 360",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://e-editiones.org/"
+    "id": "https://team360.pl/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://e-editiones.org/feed/feed.json"
+    "url": "https://team360.pl/feed/feed.json"
   },
   "twitter": {
     "enabled": false,

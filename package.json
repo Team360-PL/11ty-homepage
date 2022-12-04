@@ -1,7 +1,7 @@
 {
-  "name": "e-editiones-homepage",
+  "name": "team360-homepage",
   "version": "1.0.0",
-  "description": "New e-editiones homepage",
+  "description": "Strona klubu Team 360",
   "scripts": {
     "build": "DEBUG=tei-publisher npx @11ty/eleventy",
     "build.all": "DEBUG=tei-publisher TP_NO_CACHE=true npx @11ty/eleventy",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/wolfgangmm/11ty-homepage.gi"
+    "url": "git://github.com/Team360-PL/11ty-homepage.git"
   },
   "license": "MIT",
   "dependencies": {

@@ -26,18 +26,15 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
                 <li class="nav-item">
-                    <a href="/tags/events/" class="nav-link{% if '/tags/events/' == page.url %} active{% endif %}">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/map/" class="nav-link{% if '/map/' == page.url %} active{% endif %}">Project Registry</a>
+                    <a href="/tags/wydarzenia/" class="nav-link{% if '/tags/wydarzenia/' == page.url %} active{% endif %}">Wydarzenia</a>
                 </li>
             </ul>
             <div class="icons d-flex justify-content-end">
-                <a rel="me" href="https://social.e-editiones.org/@eeditiones" class="me-4"><i class="bi bi-mastodon"></i></a>
-                <a href="https://twitter.com/EEditiones" class="me-4">
+                <a rel="me" href="https://social.e-editiones.org/@team360" class="me-4"><i class="bi bi-mastodon"></i></a>
+                <a href="https://twitter.com/team360" class="me-4">
                     <i class="bi bi-twitter"></i>
                 </a>
-                <a href="https://github.com/eeditiones/e-editiones-website/blob/main/{{ page.inputPath }}">
+                <a href="https://github.com/Team360-PL/11ty-homepage/blob/main/{{ page.inputPath }}">
                     <i class="bi bi-github"></i>
                 </a>
             </div>
