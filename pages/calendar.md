@@ -3,6 +3,7 @@ title: "Kalendarz"
 date: "2022-12-04"
 eleventyNavigation:
     key: Kalendarz
+    order: 3
 sidebar: false
 ---
 
