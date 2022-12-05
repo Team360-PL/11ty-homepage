@@ -4,15 +4,8 @@ templateClass: home
 ---
 {% block scripts %}
 <script src="/assets/scripts/rellax.min.js"></script>
-<script src="/assets/scripts/leaflet.js"></script>
-<script src="/assets/scripts/leaflet.markercluster.js"></script>
-<script src="{{ '/assets/scripts/map.js' | url }}"></script>
 {% endblock %}
-{% block styles %}
-<link rel="stylesheet" href="/assets/css/leaflet.css">
-<link rel="stylesheet" href="/assets/css/MarkerCluster.css">
-<link rel="stylesheet" href="/assets/css/MarkerCluster.Default.css">
-{% endblock %}
+
 
 <header>
     {% include "partials/menu.njk" %}

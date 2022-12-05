@@ -10,7 +10,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginToc = require('eleventy-plugin-toc');
-const pluginTP = require('@teipublisher/pb-eleventy-plugin');
 const pluginFavicon = require("eleventy-favicon");
 
 const Image = require("@11ty/eleventy-img");
@@ -44,13 +43,7 @@ module.exports = function(eleventyConfig) {
     "./node_modules/bootstrap-icons/font/bootstrap-icons.css": "assets/css/bootstrap-icons.css",
     "./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "assets/css/fonts/bootstrap-icons.woff",
     "./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "assets/css/fonts/bootstrap-icons.woff2",
-    "./node_modules/rellax/rellax.min.js": "assets/scripts/rellax.min.js",
-    "./node_modules/leaflet/dist/leaflet.js": "assets/scripts/leaflet.js",
-    "./node_modules/leaflet/dist/leaflet.css": "assets/css/leaflet.css",
-    "./node_modules/leaflet/dist/images/*.png": "assets/css/images",
-    "./node_modules/leaflet.markercluster/dist/leaflet.markercluster.js": "assets/scripts/leaflet.markercluster.js",
-    "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css": "assets/css/MarkerCluster.Default.css",
-    "./node_modules/leaflet.markercluster/dist/MarkerCluster.css": "assets/css/MarkerCluster.css"
+    "./node_modules/rellax/rellax.min.js": "assets/scripts/rellax.min.js"
   });
 
   // Add plugins
@@ -58,8 +51,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginToc, { ul: true });
-  eleventyConfig.addPlugin(pluginFavicon);
-  eleventyConfig.addPlugin(pluginTP);
+  //eleventyConfig.addPlugin(pluginFavicon);
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
