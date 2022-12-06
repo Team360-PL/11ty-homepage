@@ -25,6 +25,7 @@
   --banner-image: url("../../img/anastasia-petrova-banner.jpg");
   --banner-height: 640px; /* calc(100vh - 30vh - 90px); */
   --header-height: 84px;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -157,6 +158,7 @@ nav.navbar {
   --bs-navbar-brand-margin-end: 60px;
   --bs-navbar-active-color: var(--bs-white);
   background-color: rgba(0, 0, 0, .40);
+  --bs-navbar-padding-y: 0rem;
 }
 
 .banner-visible nav.navbar {
@@ -183,22 +185,22 @@ ul.navbar-nav {
 
 .navbar-brand {
   width: 210px;
-  height: 64px;
-  background-image: url("../../img/360logo.jpeg");
-  background-size: 100% auto;
+  height: 80px;
+  background-image: url("../../img/360logoblack.png");
+  background-size: 60% auto;
   background-position: left center;
   background-repeat: no-repeat;
 }
 
 .banner-visible .navbar-brand {
-  background-image: url("../../img/360logo.jpeg");
+  background-image: url("../../img/360logo.png");
 }
 
 @media (max-width: 400px) {
   /* Use icon instead of logo for small screens */
   .navbar-brand, .banner-visible .navbar-brand {
     width: 64px;
-    background-image: url("../../img/360logo.jpeg");
+    background-image: url("../../img/360logoblack.png");
   }
 }
 
