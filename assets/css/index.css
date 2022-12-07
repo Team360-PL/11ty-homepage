@@ -186,21 +186,21 @@ ul.navbar-nav {
 .navbar-brand {
   width: 210px;
   height: 80px;
-  background-image: url("../../img/360logoblack.png");
+  background-image: url("../../img/360logoSmallWhite.svg");
   background-size: 60% auto;
   background-position: left center;
   background-repeat: no-repeat;
 }
 
 .banner-visible .navbar-brand {
-  background-image: url("../../img/360logo.png");
+  background-image: url("../../img/360logoSmallBlack.svg");
 }
 
 @media (max-width: 400px) {
   /* Use icon instead of logo for small screens */
   .navbar-brand, .banner-visible .navbar-brand {
     width: 64px;
-    background-image: url("../../img/360logoblack.png");
+    background-image: url("../../img/360logoSmallWhite.svg");
   }
 }
 
