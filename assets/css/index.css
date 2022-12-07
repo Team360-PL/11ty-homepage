@@ -157,8 +157,8 @@ table th {
 nav.navbar {
   --bs-navbar-brand-margin-end: 60px;
   --bs-navbar-active-color: var(--bs-white);
-  background-color: rgba(0, 0, 0, .40);
   --bs-navbar-padding-y: 0rem;
+  background-color: rgba(0, 0, 0, .40);
 }
 
 .banner-visible nav.navbar {
@@ -187,8 +187,8 @@ ul.navbar-nav {
   width: 210px;
   height: 80px;
   background-image: url("../../img/360logoSmallWhite.svg");
-  background-size: 60% auto;
-  background-position: left center;
+  background-position: top;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
