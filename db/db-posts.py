@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 )
 
 cursor = mydb.cursor(dictionary=True,buffered=True)
-query= 'SELECT nid, uid, title, created FROM team360.node where type="article" and nid > 12000 order by nid'
+query= 'SELECT nid, uid, title, created FROM team360.node where type="article" order by nid'
 cursor.execute(query)
 # myresult = mycursor.fetchall()
 records = cursor.fetchall()
@@ -19,7 +19,7 @@ print("Total number of entries: ", cursor.rowcount)
 print("\nPrinting each row")
 for row in records:     
 
-
+  title = row['title'].replace('"', '\'')
   postcursor = mydb.cursor(dictionary=True,buffered=True)
   query = 'SELECT * FROM team360.field_data_body where entity_id=' + str(row['nid']) + ';' 
   postcursor.execute(query)
@@ -49,14 +49,14 @@ for row in records:
   if os.path.exists(filename):
     os.remove(filename)
   else:
-    print("The file does not exist")
+    print("The file does not exist" + filename)
     
   f = open(filename, "a")
 
   f.write('---' + "\n")
-  f.write('title: ' + row['title'] + "\n")
-  f.write('short: ' + row['title'] + "\n")
-  f.write('lead: ' + row['title'] + "\n")
+  f.write('title: "' + title + '"' + "\n")
+  f.write('short: ' + "\n")
+  f.write('lead: ' + "\n")
   f.write('author: ' + usr['name'] + "\n")
   f.write('date: ' + dt + "\n")
   f.write('tags: '+ "\n")
@@ -68,15 +68,15 @@ for row in records:
 
   f.write(post['body_value'])
 
-  xml = \
-        '<div xml:id="P_{nid}">' + "\n" \
-        '  <head>{title}</head>' + "\n" \
-        '  <date resp="Team_{uid}" when="' + dt_object.strftime("%Y-%m-%d") + '">' + usr['name'] + '</date>' + "\n" \
-        '  <div type="content">' +  "\n" \
-        + post['body_value'] + \
-        '  </div>' + "\n" \
-        '</div>' + "\n"
-  xml2 = xml.format(**row) 
+#   xml = \
+#         '<div xml:id="P_{nid}">' + "\n" \
+#         '  <head>{title}</head>' + "\n" \
+#         '  <date resp="Team_{uid}" when="' + dt_object.strftime("%Y-%m-%d") + '">' + usr['name'] + '</date>' + "\n" \
+#         '  <div type="content">' +  "\n" \
+#         + post['body_value'] + \
+#         '  </div>' + "\n" \
+#         '</div>' + "\n"
+  #xml2 = xml.format(**row) 
   #f.write(xml2)
 
   
