@@ -1,7 +1,15 @@
 import mysql.connector
 import os
 from datetime import datetime
+import re
 
+
+def split_year(tag):
+    x = re.search("(.*)(20\d\d)$", tag)
+    if (x):
+        return {x.group(1), x.group(2)}
+    else:
+        return tag
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -10,7 +18,7 @@ mydb = mysql.connector.connect(
 )
 
 cursor = mydb.cursor(dictionary=True,buffered=True)
-query= 'SELECT nid, uid, title, created FROM team360.node where type="article" order by nid'
+query= 'SELECT nid, uid, title, created FROM team360.node where type="article" and nid > 12000 order by nid'
 cursor.execute(query)
 # myresult = mycursor.fetchall()
 records = cursor.fetchall()
@@ -59,8 +67,11 @@ for row in records:
   f.write('lead: ' + "\n")
   f.write('author: ' + usr['name'] + "\n")
   f.write('date: ' + dt + "\n")
+  f.write('id: ' + str(row['nid']) + "\n")
   f.write('tags: '+ "\n")
-  for tag in tags:     
+  for tag in tags:    
+   #for t in split_year(tag['name']):
+   #   f.write('    - ' + t + "\n")
     f.write('    - ' + tag['name'] + "\n")
   f.write('coverImage: '+ "\n")
   f.write('coverImageCredits: '+ "\n")

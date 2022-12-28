@@ -1,7 +1,13 @@
 <ul class="cloud" role="navigation" aria-label="tag cloud" data-show-value>
   {% for tag, count in collections.tagList %}
     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    {% set weight = count // 2 + 1 %}
+
+    {% if count < 40 %}
+      {% set weight = count // 2 + 1 %}
+    {% endif %}
+    {% if count > 39 %}
+      {% set weight = 20 %}
+    {% endif %}
     {% set fontSize %}calc({{weight}} * 0.15rem + var(--font-size-smallest)){% endset %}
     <li>
       <a href="{{ tagUrl | url }}" data-count="{{count}}" 
